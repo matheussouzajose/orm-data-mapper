@@ -15,15 +15,12 @@ $conn->connect([
     'options' => []
 ]);
 
-
 $repositories = new Repository($conn);
+
 try {
     $repositories->setEntity(Users::class);
 } catch (ReflectionException $e) {
     var_dump($e->getMessage());
 }
 
-$user = $repositories->first(10);
-$user->first_name = 'Ze bobys';
-$user->email = 'zebobys@gmail.com';
-$user = $repositories->update($user);
+var_dump($repositories->all());

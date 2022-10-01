@@ -2,16 +2,13 @@
 
 namespace MatheusSouzaJose\DataMapperOrm\Repositories;
 
-use App\Entities\Users as Entity;
 use http\Exception\InvalidArgumentException;
 use MatheusSouzaJose\DataMapperOrm\Drivers\IDriver;
-//use MatheusSouzaJose\DataMapperOrm\Entities\Entity;
 use MatheusSouzaJose\DataMapperOrm\Entities\IEntity;
 use MatheusSouzaJose\DataMapperOrm\QueryBuilder\Delete;
 use MatheusSouzaJose\DataMapperOrm\QueryBuilder\Insert;
 use MatheusSouzaJose\DataMapperOrm\QueryBuilder\Select;
 use MatheusSouzaJose\DataMapperOrm\QueryBuilder\Update;
-use PHPUnit\TextUI\ReflectionException;
 use PHPUnit\Util\Exception;
 
 class Repository implements IRepository
@@ -19,8 +16,8 @@ class Repository implements IRepository
     /** @var IDriver */
     protected IDriver $driver;
 
-    /** @var IEntity */
-    protected IEntity $entity;
+    /** @var */
+    protected $entity;
 
     /**
      * @param IDriver $driver
